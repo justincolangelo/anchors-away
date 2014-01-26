@@ -32,7 +32,7 @@ jQuery.extend(
         anchorTo : function(toId, rate, callback){
 
             // setup id to navigate
-            var $anchor = typeof toId != 'undefined' && toId.indexOf('#') == 0 ? $(toId) : $('#' + toId).length > 0 ? $('#' + toId) : $('html, body');
+            var $anchor = typeof toId != 'undefined' && /^[A-Za-z][A-Za-z0-9]*$/.test(toId) && $('#' + toId).length > 0 ? $('#' + toId) : $('html, body');
                 
             // Valid speed? Default to 1 second
             var speed = typeof rate === 'number' && rate % 1 == 0 ? rate : 1000;
