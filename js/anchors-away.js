@@ -30,9 +30,9 @@ jQuery.extend(
 
         // Add our new method called as $.anchorTo(param1, param2[optional], param3[optional])
         anchorTo : function(toId, rate, callback){
-            console.log($(toId).length);
+
             // setup id to navigate
-            var $anchor = toId.length && toId.indexOf('#') == 0 ? $(toId) : $('#' + toId).length > 0 ? $('#' + toId) : $('html, body');
+            var $anchor = typeof toId != 'undefined' && toId.indexOf('#') == 0 ? $(toId) : $('#' + toId).length > 0 ? $('#' + toId) : $('html, body');
                 
             // Valid speed? Default to 1 second
             var speed = typeof rate === 'number' && rate % 1 == 0 ? rate : 1000;
