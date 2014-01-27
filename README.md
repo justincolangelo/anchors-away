@@ -10,8 +10,11 @@ Requirements
 
 Usage
   $.anchorTo(someId);
+  $(someId).anchorTo();
 
 Other options:
   $.anchorTo(someId, durationMS);
   $.anchorTo(someId, durationMS, callbackFunction);
+  $(someId).anchorTo(durationMS);
+  $(someId).anchorTo(durationMS, callbackFunction);
 
